@@ -18,6 +18,9 @@ public class Inter extends Employee{
         this.University_Name = University_Name;
     }
 
+    public Inter() {
+    }
+
     @Override
     public void ShowMe() {
         System.out.println("Thông tin nhân viên Inter: Chuyên ngành: "+ this.Majors + " | kỳ: " + this.Semester + " | Trường: " + this.University_Name);

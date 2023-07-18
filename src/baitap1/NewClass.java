@@ -27,7 +27,9 @@ public class NewClass {
             System.out.println("3. Sửa thông tin nhân viên");
             System.out.println("4. Xóa nhân viên");
             System.out.println("5. Hiển thị theo loại nhân viên");
-            System.out.println("6. Thoát");
+            System.out.println("6. Hiển thị bằng cấp");
+            System.out.println("7. Thêm bằng cấp");
+            System.out.println("8. Thoát");
             System.out.print("Vui lòng chọn: ");
             choice = scanner.nextInt();
 
@@ -59,13 +61,19 @@ public class NewClass {
                    myObject.displayEmployeeByType();
                     break;
                 case 6:
+                    myObject.ShowCertificate();
+                    break;
+                case 7:
+                    myObject.AddCertificate();
+                    break;
+                case 8:
                     System.out.println("Ứng dụng kết thúc.");
                     break;
                 default:
                     System.out.println("Lựa chọn không hợp lệ. Vui lòng chọn lại.");
                     break;
             }
-        } while (choice != 6);
+        } while (choice != 8);
        
        
        
@@ -113,7 +121,7 @@ public class NewClass {
        _list.add(employee);
    }
    public void edit(){
-       System.out.println("Nhập id nhân viên cần xóa");
+       System.out.println("Nhập id nhân viên cần sửa");
        int id = scanner.nextInt();
        for (int i = 0; i < _list.size(); i++) {
            Employee x = _list.get(i);
@@ -182,4 +190,26 @@ public class NewClass {
        }
    }
   
+   public void AddCertificate(){
+       System.out.println("Nhập id nhân viên");
+       int id = scanner.nextInt();
+       for (int i = 0; i < _list.size(); i++) {
+           Employee x = _list.get(i);
+           if (x.getId() == id ) {
+           x.AddCertificate();
+           return;
+            }
+        }
+   }
+   public void ShowCertificate(){
+       System.out.println("Nhập id nhân viên");
+       int id = scanner.nextInt();
+       for (int i = 0; i < _list.size(); i++) {
+           Employee x = _list.get(i);
+           if (x.getId() == id ) {
+           x.ShowCertificate();
+           return;
+            }
+        }
+   }
 }

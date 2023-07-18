@@ -20,6 +20,8 @@ public class Experience extends Employee{
         this.ExplnYear = ExplnYear;
         this.ProSkill = ProSkill;
     }
+    public Experience(){
+    }
 
     
 

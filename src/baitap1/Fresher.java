@@ -41,7 +41,7 @@ public class Fresher extends Employee{
         this.Graduation_Rank = Graduation_Rank;
         this.Graduation_date = Graduation_date;
     }
-    
+    public Fresher(){}
 
     @Override
     public void ShowMe() {
